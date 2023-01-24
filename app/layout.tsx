@@ -1,5 +1,7 @@
 import Image from 'next/image'
+import HandleThemeProvider from './HandleThemeProvider'
 import '../styles/globals.scss'
+import DarkThemeBtn from './DarkThemeBtn'
 
 const Footer = () => {
   return <footer>Footer</footer>
@@ -11,28 +13,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head />
 
       <body>
-        <nav>Navbar</nav>
+        <HandleThemeProvider>
+          <nav>
+            Navbar <DarkThemeBtn />
+          </nav>
 
-        <main>
-          <header>
-            <h3>Header</h3>
-          </header>
-          {children}
-          <Footer />
-        </main>
+          <main>
+            <header>
+              <h3>Header</h3>
+            </header>
+            {children}
+            <Footer />
+          </main>
+        </HandleThemeProvider>
       </body>
     </html>
   )
 }
-/*
-        <footer className="flex items-center justify-center w-full h-24 border-t">
-          <a
-            className="flex items-center justify-center gap-2 "
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </a>
-        </footer>
-*/

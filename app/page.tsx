@@ -1,11 +1,18 @@
-const page = () => {
+import DarkThemeBtn from './DarkThemeBtn'
+import Scene from '../components/3D/ThreeJSTest'
+
+const Page = () => {
   return (
     <>
       <section>
-        <article> Section 1 </article>
+        <article>
+          {' '}
+          Section 1
+          <Scene />
+        </article>
       </section>
       <section>
-        <article> Section 2 </article>
+        <article> Section 2</article>
       </section>
       <section>
         <article> Section 3 </article>
@@ -17,4 +24,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
