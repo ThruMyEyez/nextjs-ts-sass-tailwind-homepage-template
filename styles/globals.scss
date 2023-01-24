@@ -1,0 +1,63 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+$t: transparent;
+
+$navbarHeight: 2rem;
+//$headerHeight: 20rem;
+
+@mixin flex-center {
+  @apply flex justify-center items-center;
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html,
+  body {
+    background: -webkit-radial-gradient(top left, ellipse, #fde152 0%, $t),
+      linear-gradient(to bottom, #fa715f, #fa715f 60%, #db1174, #9b4ca7);
+    background: linear-gradient(5deg, #036564, #033649);
+    @apply w-full min-h-full  text-[20px]/*bg-secondary-debug*/ text-blue-debug;
+    &:before {
+      @apply h-[8px] fixed top-[-10px] left-0 w-full z-[1001];
+      content: '';
+      box-shadow: 2px 0 10px #000000e0;
+    }
+  }
+  nav {
+    height: $navbarHeight;
+    @include flex-center; //@apply w-[calc(100%)]  text-[color:var(#ff00aa)]
+    @apply sticky top-0 z-50 bg-white/10 backdrop-blur-sm;
+    //background: linear-gradient(145deg, #036564, #033649);
+  }
+}
+
+main {
+  @include flex-center;
+
+  min-height: calc(100vh - $navbarHeight);
+  background: linear-gradient(to bottom, transparent, rgb(255, 255, 255), rgb(214, 219, 220));
+  @apply w-5/6 mx-auto flex-col;
+
+  header {
+    //    @include flex-center;
+    @apply flex-col border-zinc-500 border w-full;
+  }
+  footer {
+    width: 120%;
+    position: relative;
+    @apply bg-zinc-900/20 flex mt-auto;
+  }
+}
+
+section {
+  @include flex-center;
+  @apply w-full;
+  article {
+    @apply w-[90%] max-w-[100em] min-h-[10vh];
+  }
+}
