@@ -1,4 +1,4 @@
-import Scene from '../components/3D/ThreeJSTest'
+import Scene from '../components/3D/ThreeJSTest';
 
 export default function Page() {
   return (
@@ -19,5 +19,5 @@ export default function Page() {
         <article> Section 4 </article>
       </section>
     </>
-  )
+  );
 }
