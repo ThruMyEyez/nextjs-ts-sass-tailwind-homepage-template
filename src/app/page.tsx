@@ -1,12 +1,10 @@
-import DarkThemeBtn from './DarkThemeBtn'
 import Scene from '../components/3D/ThreeJSTest'
 
-const Page = () => {
+export default function Page() {
   return (
     <>
       <section>
         <article>
-          {' '}
           Section 1
           <Scene />
         </article>
@@ -23,5 +21,3 @@ const Page = () => {
     </>
   )
 }
-
-export default Page

@@ -3,7 +3,15 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:@typescript-eslint/recommended", "next", "next/core-web-vitals", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "next",
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "overrides": [],
   "parser": "@typescript-eslint/parser",
   "ignorePatterns": ["postcss.config.js", "tailwind.config.js"],
   "parserOptions": {
@@ -17,5 +25,19 @@
     "React": true,
     "JSX": true
   },
-  "plugins": ["@typescript-eslint"]
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@next/next/no-html-link-for-pages": ["error", "src/"]
+  }
 }

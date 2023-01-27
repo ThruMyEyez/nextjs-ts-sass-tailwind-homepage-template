@@ -16,6 +16,7 @@
 # misc
 .DS_Store
 *.pem
+/._pages/
 
 # debug
 npm-debug.log*

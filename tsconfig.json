@@ -16,10 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@app/*": ["app/*"],
-      "@data/*": ["data/*"],
-      "@lib/*": ["lib/*"],
-      "@components/*": ["components/*"]
+      "@/*": ["./src/*"]
     },
     "plugins": [
       {
@@ -27,7 +24,6 @@
       }
     ]
   },
-
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

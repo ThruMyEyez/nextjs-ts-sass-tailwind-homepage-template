@@ -1,17 +1,12 @@
-import Image from 'next/image'
-import HandleThemeProvider from './HandleThemeProvider'
-import '../styles/globals.scss'
-import DarkThemeBtn from './DarkThemeBtn'
-
-const Footer = () => {
-  return <footer>Footer</footer>
-}
+//import Image from 'next/image';
+import '../styles/globals.scss';
+import Footer from '../components/UI/footer/Footer';
+import HandleThemeProvider from './HandleThemeProvider';
+import DarkThemeBtn from './DarkThemeBtn';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
-      <head />
-
       <body>
         <HandleThemeProvider>
           <nav>
@@ -28,5 +23,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </HandleThemeProvider>
       </body>
     </html>
-  )
+  );
 }

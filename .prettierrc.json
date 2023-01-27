@@ -4,7 +4,8 @@
   "tabWidth": 2,
   "printWidth": 120,
   "useTabs": false,
-  "semi": false,
+  "semi": true,
+  "endOfLine": "lf",
   "trailingComma": "es5",
   "bracketSpacing": true,
   "arrowParens": "avoid"
